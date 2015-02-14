@@ -37,6 +37,10 @@ function getData(){
         mkdir $base_folder
     fi
 
+    if [ -f $log_filename ]; then
+        rm $log_filename
+    fi
+
     while [ $i -lt  $iterations ] ;
     do
         gstat -b | grep $disk_idetnifier >> $log_filename
