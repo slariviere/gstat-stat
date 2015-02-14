@@ -5,6 +5,8 @@ disk_idetnifier="ada"                 # Disk device identifier
 iterations=3600                       # Number of iteration to gather data
 log_filename=$base_folder/stats.out   # Filename of the file containing gstat data
 
+trap printStats_int INT
+
 i=0
 
 # Get the list of drives used and put it in the $drive array
@@ -29,6 +31,13 @@ function printStats(){
         j=$((j+1))
         echo ""
     done
+}
+
+# Output value of the gathered data
+function printStats_int(){
+    echo ""
+    printStats
+    exit 1
 }
 
 # Gather data from gstat
