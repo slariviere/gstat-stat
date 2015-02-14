@@ -3,7 +3,7 @@
 base_folder=$(pwd)/.gstat-stat        # Folder to keep data
 disk_idetnifier="ada"                 # Disk device identifier 
 iterations=3600                       # Number of iteration to gather data
-log_filename=$basefolder/stats.out    # Filename of the file containing gstat data
+log_filename=$base_folder/stats.out   # Filename of the file containing gstat data
 
 i=0
 
