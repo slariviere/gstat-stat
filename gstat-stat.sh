@@ -47,7 +47,7 @@ function getData(){
     fi
 
     if [ -f $log_filename ]; then
-        rm $log_filename
+        echo > $log_filename
     fi
 
     while [ $i -lt  $iterations ] ;
